@@ -216,6 +216,153 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/10/JavaScript中的参数传递/" itemprop="url">
+                  JavaScript中的参数传递
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-10T10:26:22+08:00" content="2016-04-10">
+              2016-04-10
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/10/JavaScript中的参数传递/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/10/JavaScript中的参数传递/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/04/10/JavaScript中的参数传递/" class="leancloud_visitors" data-flag-title="JavaScript中的参数传递">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="JavaScript中的数据结构"><a href="#JavaScript中的数据结构" class="headerlink" title="JavaScript中的数据结构"></a><strong>JavaScript中的数据结构</strong></h2><p>1.<strong>原始数据类型值</strong> （<em>primitive type</em>）<br>如undefind，null，boolean，number，string。<br>2.<strong>引用数据类型值</strong>（<em>Object type</em>）<br>如Object，array，function，date等。</p>
+<p>  <strong>声明变量时不同的内存分配</strong><br>1.<strong>原始值</strong>：存储在栈内存(<em>stack</em>)中，值直接存储在变量访问的地方。原始数据类型占据的空间是固定的，所以可将他们存储在较小的内存空间，便于迅速查找变量的值。<br>2.<strong>引用值</strong>：存储在堆内存(<em>heap</em>)中，存储在变量处的值是一个指针，指向存储对象的内存地址。因为应用类型值大小会发生改变，所以不能够放在栈中。所以访问的时候首先得到的是它在堆内存中的地址，再按地址去得到对象的值。</p>
+<p>  <strong>复制变量时的不同</strong><br>1.<strong>原始值</strong>：将一个保存着原始值的变量复制给另一个变量时，会将原始值得副本复制给新变量，此后两个变量是完全独立的，只有value是相同的，<br>2.<strong>引用值</strong>：将一个保存着对象内存地址的引用变量复制给另一个变量时，会把地址赋值给新变量，也就是说这两个变量同时指向了堆内存的同一个对象，他们中任何一个的改变都会反应在另一个身上。<br>//<strong><strong><em>**</em></strong></strong></p>
+<pre><code>var obj1 = {value:&quot;111&quot;};
+
+var obj2 = {value:&quot;222&quot;};
+
+function changeStuff(obj){
+    obj.value=&quot;333&quot;
+    obj = obj2;
+    console.log(obj.value);
+}
+changeStuff(obj1);//&quot;222&quot; 参数obj指向了新的对象obj2
+console.log(obj1.value);//&quot;333&quot; obj1任然指向原来的对象，只是value改变了
+</code></pre><p>//<strong><strong><em>**</em></strong></strong></p>
+<pre><code>var arr = [1,2,3,4,5];
+function fun(obj){
+    obj[0] = 6;
+    obj = &quot;hi&quot;;
+    console.log(obj);  
+}
+fun(arr);//&quot;hi&quot;  原来obj指向arr对象的地址变量被赋值为变量&quot;hi&quot;
+console.log(arr);//Array [ 6, 2, 3, 4, 5 ]  arr任然指向原来的对象，只是对象的值被另一个引用改变了
+</code></pre><p>//<strong><strong><em>**</em></strong></strong></p>
+<pre><code>var arr = [1,2,3,4,5];
+function fun(){
+    arr[0] = 6;
+    arr = &quot;hi&quot;;
+    console.log(arr);  
+}
+fun();//hi  函数内调用全局arr，arr存有对象的地址已经被赋值为&quot;hi&quot;
+console.log(arr);//&quot;hi&quot; 函数内改变的是全局变量,内存已经没有存放对象地址的变量了，所以对象会被回收。
+</code></pre><p>//<strong><strong><em>**</em></strong></strong></p>
+<pre><code>var arr = [1,2,3,4,5];
+function fun(obj){
+    arr[0] = 6;
+    arr = &quot;hi&quot;;
+    console.log(obj);  
+}
+fun(arr);//Array [ 6, 2, 3, 4, 5 ]   对象的值已经被被另一个引用改变了
+console.log(arr);//&quot;hi&quot; arr存放指向对象地址的变量被赋值为变量&quot;hi&quot;
+</code></pre><p>当改变对象内部的属性的时候，这个改变会体现在外部，因为他们共同的对象被改变了。<br>而如果在函数内部给这个参数赋值另一个对象时，这个参数就会更改它的值为新对象的内存地址指向新对象，但是原来的变量任然指向原来的对象，此时是相互独立的。</p>
+<p>花了一上午时间学习markdown语法以及写这篇博文，第一次写这种笔记，写的不太好，不过也算跨出第一步了，加油！     </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/12/hello-world/" itemprop="url">
                   Hello World
                 </a>
@@ -349,13 +496,20 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
           
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>

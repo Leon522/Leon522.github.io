@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -57,19 +57,19 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="JavaScript中的数据结构1.原始数据类型值 （primitive type）如undefind，null，boolean，number，string。2.引用数据类型值（Object type）如Object，array，function，date等。
+  声明变量时不同的内存分配1.原始值：存储在栈内存(stack)中，值直接存储在变量访问的地方。原始数据类型占据的空间是固定的，所以可将">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/03/12/hello-world/index.html">
+<meta property="og:title" content="JavaScript中的参数传递">
+<meta property="og:url" content="http://yoursite.com/2016/04/10/JavaScript中的参数传递/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-03-12T12:53:25.099Z">
+<meta property="og:description" content="JavaScript中的数据结构1.原始数据类型值 （primitive type）如undefind，null，boolean，number，string。2.引用数据类型值（Object type）如Object，array，function，date等。
+  声明变量时不同的内存分配1.原始值：存储在栈内存(stack)中，值直接存储在变量访问的地方。原始数据类型占据的空间是固定的，所以可将">
+<meta property="og:updated_time" content="2016-04-10T04:53:42.009Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="JavaScript中的参数传递">
+<meta name="twitter:description" content="JavaScript中的数据结构1.原始数据类型值 （primitive type）如undefind，null，boolean，number，string。2.引用数据类型值（Object type）如Object，array，function，date等。
+  声明变量时不同的内存分配1.原始值：存储在栈内存(stack)中，值直接存储在变量访问的地方。原始数据类型占据的空间是固定的，所以可将">
 
 
 
@@ -87,7 +87,7 @@ Quick">
   };
 </script>
 
-  <title> Hello World | Hexo </title>
+  <title> JavaScript中的参数传递 | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -217,7 +217,7 @@ Quick">
             
             
               
-                Hello World
+                JavaScript中的参数传递
               
             
           </h1>
@@ -229,8 +229,8 @@ Quick">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-12T20:53:25+08:00" content="2016-03-12">
-              2016-03-12
+            <time itemprop="dateCreated" datetime="2016-04-10T10:26:22+08:00" content="2016-04-10">
+              2016-04-10
             </time>
           </span>
 
@@ -240,8 +240,8 @@ Quick">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/12/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/12/hello-world/" itemprop="commentsCount"></span>
+                <a href="/2016/04/10/JavaScript中的参数传递/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/10/JavaScript中的参数传递/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -251,7 +251,7 @@ Quick">
 
           
           
-             <span id="/2016/03/12/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+             <span id="/2016/04/10/JavaScript中的参数传递/" class="leancloud_visitors" data-flag-title="JavaScript中的参数传递">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -272,15 +272,49 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="JavaScript中的数据结构"><a href="#JavaScript中的数据结构" class="headerlink" title="JavaScript中的数据结构"></a><strong>JavaScript中的数据结构</strong></h2><p>1.<strong>原始数据类型值</strong> （<em>primitive type</em>）<br>如undefind，null，boolean，number，string。<br>2.<strong>引用数据类型值</strong>（<em>Object type</em>）<br>如Object，array，function，date等。</p>
+<p>  <strong>声明变量时不同的内存分配</strong><br>1.<strong>原始值</strong>：存储在栈内存(<em>stack</em>)中，值直接存储在变量访问的地方。原始数据类型占据的空间是固定的，所以可将他们存储在较小的内存空间，便于迅速查找变量的值。<br>2.<strong>引用值</strong>：存储在堆内存(<em>heap</em>)中，存储在变量处的值是一个指针，指向存储对象的内存地址。因为应用类型值大小会发生改变，所以不能够放在栈中。所以访问的时候首先得到的是它在堆内存中的地址，再按地址去得到对象的值。</p>
+<p>  <strong>复制变量时的不同</strong><br>1.<strong>原始值</strong>：将一个保存着原始值的变量复制给另一个变量时，会将原始值得副本复制给新变量，此后两个变量是完全独立的，只有value是相同的，<br>2.<strong>引用值</strong>：将一个保存着对象内存地址的引用变量复制给另一个变量时，会把地址赋值给新变量，也就是说这两个变量同时指向了堆内存的同一个对象，他们中任何一个的改变都会反应在另一个身上。<br>//<strong><strong><em>**</em></strong></strong></p>
+<pre><code>var obj1 = {value:&quot;111&quot;};
+
+var obj2 = {value:&quot;222&quot;};
+
+function changeStuff(obj){
+    obj.value=&quot;333&quot;
+    obj = obj2;
+    console.log(obj.value);
+}
+changeStuff(obj1);//&quot;222&quot; 参数obj指向了新的对象obj2
+console.log(obj1.value);//&quot;333&quot; obj1任然指向原来的对象，只是value改变了
+</code></pre><p>//<strong><strong><em>**</em></strong></strong></p>
+<pre><code>var arr = [1,2,3,4,5];
+function fun(obj){
+    obj[0] = 6;
+    obj = &quot;hi&quot;;
+    console.log(obj);  
+}
+fun(arr);//&quot;hi&quot;  原来obj指向arr对象的地址变量被赋值为变量&quot;hi&quot;
+console.log(arr);//Array [ 6, 2, 3, 4, 5 ]  arr任然指向原来的对象，只是对象的值被另一个引用改变了
+</code></pre><p>//<strong><strong><em>**</em></strong></strong></p>
+<pre><code>var arr = [1,2,3,4,5];
+function fun(){
+    arr[0] = 6;
+    arr = &quot;hi&quot;;
+    console.log(arr);  
+}
+fun();//hi  函数内调用全局arr，arr存有对象的地址已经被赋值为&quot;hi&quot;
+console.log(arr);//&quot;hi&quot; 函数内改变的是全局变量,内存已经没有存放对象地址的变量了，所以对象会被回收。
+</code></pre><p>//<strong><strong><em>**</em></strong></strong></p>
+<pre><code>var arr = [1,2,3,4,5];
+function fun(obj){
+    arr[0] = 6;
+    arr = &quot;hi&quot;;
+    console.log(obj);  
+}
+fun(arr);//Array [ 6, 2, 3, 4, 5 ]   对象的值已经被被另一个引用改变了
+console.log(arr);//&quot;hi&quot; arr存放指向对象地址的变量被赋值为变量&quot;hi&quot;
+</code></pre><p>当改变对象内部的属性的时候，这个改变会体现在外部，因为他们共同的对象被改变了。<br>而如果在函数内部给这个参数赋值另一个对象时，这个参数就会更改它的值为新对象的内存地址指向新对象，但是原来的变量任然指向原来的对象，此时是相互独立的。</p>
+<p>花了一上午时间学习markdown语法以及写这篇博文，第一次写这种笔记，写的不太好，不过也算跨出第一步了，加油！     </p>
 
       
     </div>
@@ -293,18 +327,24 @@ Quick">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/03/12/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/10/JavaScript中的参数传递/" rel="prev" title="JavaScript中的参数传递">
-                JavaScript中的参数传递 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -330,8 +370,8 @@ Quick">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/12/hello-world/"
-           data-title="Hello World" data-url="http://yoursite.com/2016/03/12/hello-world/">
+      <div class="ds-thread" data-thread-key="2016/04/10/JavaScript中的参数传递/"
+           data-title="JavaScript中的参数传递" data-url="http://yoursite.com/2016/04/10/JavaScript中的参数传递/">
       </div>
     
   </div>
@@ -437,7 +477,7 @@ Quick">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript中的数据结构"><span class="nav-number">1.</span> <span class="nav-text">JavaScript中的数据结构</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
