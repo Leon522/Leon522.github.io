@@ -75,17 +75,17 @@
 不同的端口号
 默认情况下，浏览器可以针对HTML、CSS、JS、图片发起跨域请求——同步请求。
 客户端浏览器默认禁用XHR的跨域请求（不论何种资源）——出于安全考虑！使用场景：项目很大，于是把静态HTML放在A服务器，动态数据(PHP文件">
-<meta property="og:image" content="http://yoursite.com/../img/1.png">
-<meta property="og:image" content="http://yoursite.com/../img/10.png">
-<meta property="og:image" content="http://yoursite.com/../img/2.png">
-<meta property="og:image" content="http://yoursite.com/../img/3.png">
-<meta property="og:image" content="http://yoursite.com/../img/4.png">
-<meta property="og:image" content="http://yoursite.com/../img/5.png">
-<meta property="og:image" content="http://yoursite.com/../img/6.png">
-<meta property="og:image" content="http://yoursite.com/../img/7.png">
-<meta property="og:image" content="http://yoursite.com/../img/8.png">
-<meta property="og:image" content="http://yoursite.com/../img/9.png">
-<meta property="og:updated_time" content="2016-05-21T13:54:59.496Z">
+<meta property="og:image" content="http://yoursite.com/img/1.png">
+<meta property="og:image" content="http://yoursite.com/img/10.png">
+<meta property="og:image" content="http://yoursite.com/img/2.png">
+<meta property="og:image" content="http://yoursite.com/img/3.png">
+<meta property="og:image" content="http://yoursite.com/img/4.png">
+<meta property="og:image" content="http://yoursite.com/img/5.png">
+<meta property="og:image" content="http://yoursite.com/img/6.png">
+<meta property="og:image" content="http://yoursite.com/img/7.png">
+<meta property="og:image" content="http://yoursite.com/img/8.png">
+<meta property="og:image" content="http://yoursite.com/img/9.png">
+<meta property="og:updated_time" content="2016-05-21T14:06:35.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跨域请求的几种方式">
 <meta name="twitter:description" content="跨域：Cross Domain Request请求不同的域上的资源(HTML/CSS/JS/SCRIPT/JPEG等)不同的域可能是：
@@ -95,7 +95,7 @@
 不同的端口号
 默认情况下，浏览器可以针对HTML、CSS、JS、图片发起跨域请求——同步请求。
 客户端浏览器默认禁用XHR的跨域请求（不论何种资源）——出于安全考虑！使用场景：项目很大，于是把静态HTML放在A服务器，动态数据(PHP文件">
-<meta name="twitter:image" content="http://yoursite.com/../img/1.png">
+<meta name="twitter:image" content="http://yoursite.com/img/1.png">
 
 
 
@@ -302,14 +302,14 @@
 <ol>
 <li>不同的协议</li>
 <li>不同的域名</li>
-<li>不同的端口号<br><img src="../img/1.png" alt=""></li>
+<li>不同的端口号<br><img src="/img/1.png" alt=""></li>
 <li>默认情况下，浏览器可以针对HTML、CSS、JS、图片发起跨域请求——同步请求。</li>
 <li>客户端浏览器默认禁用XHR的跨域请求（不论何种资源）——出于安全考虑！<br>使用场景：项目很大，于是把静态HTML放在A服务器，动态数据(PHP文件)放在B服务器，动态数据(JSP文件)放在C服务器；A服务器上的静态HTML需要动态数据，必需使用异步请求——不能使用XHR发起跨域请求。</li>
 </ol>
 <h2 id="解决办法一：-JSONP"><a href="#解决办法一：-JSONP" class="headerlink" title="**解决办法一： JSONP "></a>**解决办法一： JSONP </h2><p>JSON with Padding，JSONP，填充式JSON，是以一种手段、一种技巧，可以巧妙的跨过XHR跨域请求的限制——与JSON不同，不是一种字符串格式。<br>思路：</p>
 <ol>
 <li>不使用XHR对象——XHR的跨域请求会被浏览器禁止！</li>
-<li><p>在DOM树动态添加script元素——SCRIPT的跨域请求浏览器允许<br><img src="../img/10.png" alt=""><br>3.PHP页面返回的JSON字符串稍加改造：</p>
+<li><p>在DOM树动态添加script元素——SCRIPT的跨域请求浏览器允许<br><img src="/img/10.png" alt=""><br>3.PHP页面返回的JSON字符串稍加改造：</p>
 <p>$json = ‘{“ename”:”Tom”, “age”:20}’;<br>//echo $json;<br>echo  ‘doResponse(‘. $json .’)’;   //字符串</p>
 </li>
 </ol>
@@ -317,7 +317,7 @@
 <pre><code>doResponse({&quot;ename&quot;:&quot;Tom&quot;, &quot;age&quot;:20})
 </code></pre><p>其中的函数本地在HTML中声明，其中的数据是PHP返回的。</p>
 <p><em>由于服务器不知道客户端的回调是什么，不可能hard code成jsonpcallback，所以就带一个QueryString让客户端告诉服务端，回调方法是什么，当然，QueryString的key要遵从服务端的约定，上面的是”callback“。返回的就是对一个方法的回调，参数就是需要请求的数据</em></p>
-<p><img src="../img/2.png" alt=""><br><strong>AJAX和JSONP的关系？</strong><br>严格说，二者没有任何关系！<br>AJAX的核心是XHR对象，不能发起跨域请求；<br>JSONP的核心是SCRIPT元素，可以发起跨域请求；<br>二者的相似点：都能实现异步请求，异步获取服务器端数据。</p>
+<p><img src="/img/2.png" alt=""><br><strong>AJAX和JSONP的关系？</strong><br>严格说，二者没有任何关系！<br>AJAX的核心是XHR对象，不能发起跨域请求；<br>JSONP的核心是SCRIPT元素，可以发起跨域请求；<br>二者的相似点：都能实现异步请求，异步获取服务器端数据。</p>
 <p><strong>2.jQuery对JSONP的支持</strong><br>  <em>jQuery对AJAX的封装函数：</em></p>
 <ol>
 <li>$(…).load( )        </li>
@@ -342,8 +342,8 @@ success: function(data){  }
 </ol>
 <p><strong>缺点：</strong><br>1、这种方式无法发送post请求，无法解决数据量大的情况<br>2、另外要确定jsonp的请求是否失败并不容易，大多数框架的实现都是结合超时时间来判定。<br>3、安全隐患（容易受到csrf攻击，csrf的解决必须是post请求配合token使用）</p>
 <h2 id="解决方法二：CORS（跨域资源共享，Cross-Origin-Resource-Sharing）"><a href="#解决方法二：CORS（跨域资源共享，Cross-Origin-Resource-Sharing）" class="headerlink" title="**解决方法二：CORS（跨域资源共享，Cross-Origin Resource Sharing）"></a>**解决方法二：CORS（跨域资源共享，Cross-Origin Resource Sharing）</h2><p><strong>CORS的原理：</strong><br>W3C制定的跨站资源分享标准。post前会产生一次options嗅探来确认有否跨域请求的权限；客户端post时会带上Origin头指示来源网站，服务端响应时需带上Access-Control-Allow-Origin头与Origin头的值匹配，以示许可。ie8提供了封装好的XDomainRequest对象，部分实现了该标准；而其它浏览器则提供了XMLHttpRequest（Level 2）对象。<br>CORS定义一种跨域访问的机制，可以让AJAX实现跨域访问。CORS 允许一个域上的网络应用向另一个域提交跨域 AJAX 请求。实现此功能非常简单，只需由服务器发送一个响应标头即可。</p>
-<p> <img src="../img/3.png" alt=""><br>“*”号表示允许任何域向我们的服务端提交请求<br> <img src="../img/4.png" alt=""><br>也可以指定域名<br>这种方式弥补了JSONP在数据量大，get方式搞不定的缺陷</p>
-<h2 id="解决方法三-Proxy代理"><a href="#解决方法三-Proxy代理" class="headerlink" title="**解决方法三   Proxy代理"></a>**解决方法三   Proxy代理</h2><p><strong>这种方式首先将请求发送给后台服务器，通过服务器来发送请求，然后将请求的结果传递给前端。<br>我们不能在浏览器端直接使用AJAX来跨域访问资源，但是在服务器端是没有这种跨域安全限制的。</strong><br>北京服务器(域名:www.beijing.com)<br>上海服务器(域名：www.shanghai.com)<br>比如在北京的web服务器的后台(www.beijing.com/proxy.php)来调用上海服务器(www.shanghai.com/services.php)的服务，然后再把访问结果返回给前端，这样前端调用北京同域名的服务就和调用上海的服务效果相同了。<br> <img src="../img/5.png" alt=""><br>具体代码如下：<br>首先我请求的是同一域名下服务器的资源<br> <img src="../img/6.png" alt=""><br>服务器之间没有跨域限制所以可以向其他域名服务器请求资源<br> <img src="../img/7.png" alt=""><br>被请求的资源 5.php<br> <img src="../img/8.png" alt=""><br>跨域请求成功<br> <img src="../img/9.png" alt=""></p>
+<p> <img src="/img/3.png" alt=""><br>“*”号表示允许任何域向我们的服务端提交请求<br> <img src="/img/4.png" alt=""><br>也可以指定域名<br>这种方式弥补了JSONP在数据量大，get方式搞不定的缺陷</p>
+<h2 id="解决方法三-Proxy代理"><a href="#解决方法三-Proxy代理" class="headerlink" title="**解决方法三   Proxy代理"></a>**解决方法三   Proxy代理</h2><p><strong>这种方式首先将请求发送给后台服务器，通过服务器来发送请求，然后将请求的结果传递给前端。<br>我们不能在浏览器端直接使用AJAX来跨域访问资源，但是在服务器端是没有这种跨域安全限制的。</strong><br>北京服务器(域名:www.beijing.com)<br>上海服务器(域名：www.shanghai.com)<br>比如在北京的web服务器的后台(www.beijing.com/proxy.php)来调用上海服务器(www.shanghai.com/services.php)的服务，然后再把访问结果返回给前端，这样前端调用北京同域名的服务就和调用上海的服务效果相同了。<br> <img src="/img/5.png" alt=""><br>具体代码如下：<br>首先我请求的是同一域名下服务器的资源<br> <img src="/img/6.png" alt=""><br>服务器之间没有跨域限制所以可以向其他域名服务器请求资源<br> <img src="/img/7.png" alt=""><br>被请求的资源 5.php<br> <img src="/img/8.png" alt=""><br>跨域请求成功<br> <img src="/img/9.png" alt=""></p>
 <p>以上就是跨域请求资源的几种解决方法，有一种跨域比较特殊就是在https协议下发送https请求，除了使用proxy代理外其他方法都无解。</p>
 
       
