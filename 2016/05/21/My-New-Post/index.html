@@ -57,19 +57,42 @@
 
 
 
-<meta name="description" content="JavaScript中的数据结构1.原始数据类型值 （primitive type）如undefind，null，boolean，number，string。2.引用数据类型值（Object type）如Object，array，function，date等。
-  声明变量时不同的内存分配1.原始值：存储在栈内存(stack)中，值直接存储在变量访问的地方。原始数据类型占据的空间是固定的，所以可将">
+<meta name="description" content="##跨域：Cross Domain Request，请求不同的域上的资源(HTML/CSS/JS/SCRIPT/JPEG等)不同的域可能是：
+
+不同的协议
+不同的域名
+不同的端口号
+
+默认情况下，浏览器可以针对HTML、CSS、JS、图片发起跨域请求——同步请求。
+
+客户端浏览器默认禁用XHR的跨域请求（不论何种资源）——出于安全考虑！使用场景：项目很大，于是把静态HTML放在A服务器，动态数据(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript中的参数传递">
-<meta property="og:url" content="http://yoursite.com/2016/04/10/JavaScript中的参数传递/index.html">
+<meta property="og:title" content="跨域请求的几种方式">
+<meta property="og:url" content="http://yoursite.com/2016/05/21/My-New-Post/index.html">
 <meta property="og:site_name" content="尽力往前走">
-<meta property="og:description" content="JavaScript中的数据结构1.原始数据类型值 （primitive type）如undefind，null，boolean，number，string。2.引用数据类型值（Object type）如Object，array，function，date等。
-  声明变量时不同的内存分配1.原始值：存储在栈内存(stack)中，值直接存储在变量访问的地方。原始数据类型占据的空间是固定的，所以可将">
-<meta property="og:updated_time" content="2016-04-10T04:53:42.009Z">
+<meta property="og:description" content="##跨域：Cross Domain Request，请求不同的域上的资源(HTML/CSS/JS/SCRIPT/JPEG等)不同的域可能是：
+
+不同的协议
+不同的域名
+不同的端口号
+
+默认情况下，浏览器可以针对HTML、CSS、JS、图片发起跨域请求——同步请求。
+
+客户端浏览器默认禁用XHR的跨域请求（不论何种资源）——出于安全考虑！使用场景：项目很大，于是把静态HTML放在A服务器，动态数据(">
+<meta property="og:image" content="http://yoursite.com/mark/1.png">
+<meta property="og:updated_time" content="2016-05-21T12:33:53.182Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript中的参数传递">
-<meta name="twitter:description" content="JavaScript中的数据结构1.原始数据类型值 （primitive type）如undefind，null，boolean，number，string。2.引用数据类型值（Object type）如Object，array，function，date等。
-  声明变量时不同的内存分配1.原始值：存储在栈内存(stack)中，值直接存储在变量访问的地方。原始数据类型占据的空间是固定的，所以可将">
+<meta name="twitter:title" content="跨域请求的几种方式">
+<meta name="twitter:description" content="##跨域：Cross Domain Request，请求不同的域上的资源(HTML/CSS/JS/SCRIPT/JPEG等)不同的域可能是：
+
+不同的协议
+不同的域名
+不同的端口号
+
+默认情况下，浏览器可以针对HTML、CSS、JS、图片发起跨域请求——同步请求。
+
+客户端浏览器默认禁用XHR的跨域请求（不论何种资源）——出于安全考虑！使用场景：项目很大，于是把静态HTML放在A服务器，动态数据(">
+<meta name="twitter:image" content="http://yoursite.com/mark/1.png">
 
 
 
@@ -87,7 +110,7 @@
   };
 </script>
 
-  <title> JavaScript中的参数传递 | 尽力往前走 </title>
+  <title> 跨域请求的几种方式 | 尽力往前走 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -217,7 +240,7 @@
             
             
               
-                JavaScript中的参数传递
+                跨域请求的几种方式
               
             
           </h1>
@@ -229,8 +252,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-10T10:26:22+08:00" content="2016-04-10">
-              2016-04-10
+            <time itemprop="dateCreated" datetime="2016-05-21T16:32:57+08:00" content="2016-05-21">
+              2016-05-21
             </time>
           </span>
 
@@ -240,8 +263,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/10/JavaScript中的参数传递/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/10/JavaScript中的参数传递/" itemprop="commentsCount"></span>
+                <a href="/2016/05/21/My-New-Post/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/21/My-New-Post/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -251,7 +274,7 @@
 
           
           
-             <span id="/2016/04/10/JavaScript中的参数传递/" class="leancloud_visitors" data-flag-title="JavaScript中的参数传递">
+             <span id="/2016/05/21/My-New-Post/" class="leancloud_visitors" data-flag-title="跨域请求的几种方式">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -272,50 +295,69 @@
       
 
       
-        <h2 id="JavaScript中的数据结构"><a href="#JavaScript中的数据结构" class="headerlink" title="JavaScript中的数据结构"></a><strong>JavaScript中的数据结构</strong></h2><p>1.<strong>原始数据类型值</strong> （<em>primitive type</em>）<br>如undefind，null，boolean，number，string。<br>2.<strong>引用数据类型值</strong>（<em>Object type</em>）<br>如Object，array，function，date等。</p>
-<p>  <strong>声明变量时不同的内存分配</strong><br>1.<strong>原始值</strong>：存储在栈内存(<em>stack</em>)中，值直接存储在变量访问的地方。原始数据类型占据的空间是固定的，所以可将他们存储在较小的内存空间，便于迅速查找变量的值。<br>2.<strong>引用值</strong>：存储在堆内存(<em>heap</em>)中，存储在变量处的值是一个指针，指向存储对象的内存地址。因为应用类型值大小会发生改变，所以不能够放在栈中。所以访问的时候首先得到的是它在堆内存中的地址，再按地址去得到对象的值。</p>
-<p>  <strong>复制变量时的不同</strong><br>1.<strong>原始值</strong>：将一个保存着原始值的变量复制给另一个变量时，会将原始值得副本复制给新变量，此后两个变量是完全独立的，只有value是相同的，<br>2.<strong>引用值</strong>：将一个保存着对象内存地址的引用变量复制给另一个变量时，会把地址赋值给新变量，也就是说这两个变量同时指向了堆内存的同一个对象，他们中任何一个的改变都会反应在另一个身上。<br>//<strong><strong><em>**</em></strong></strong></p>
-<pre><code>var obj1 = {value:&quot;111&quot;};
+        <p>##跨域：Cross Domain Request，请求不同的域上的资源(HTML/CSS/JS/SCRIPT/JPEG等)<br>不同的域可能是：</p>
+<ol>
+<li>不同的协议</li>
+<li>不同的域名</li>
+<li><p>不同的端口号<br><img src="mark/1.png" alt=""></p>
+</li>
+<li><p>默认情况下，浏览器可以针对HTML、CSS、JS、图片发起跨域请求——同步请求。</p>
+</li>
+<li>客户端浏览器默认禁用XHR的跨域请求（不论何种资源）——出于安全考虑！<br>使用场景：项目很大，于是把静态HTML放在A服务器，动态数据(PHP文件)放在B服务器，动态数据(JSP文件)放在C服务器；A服务器上的静态HTML需要动态数据，必需使用异步请求——不能使用XHR发起跨域请求。</li>
+</ol>
+<p>##解决办法一： JSONP<br>JSON with Padding，JSONP，填充式JSON，是以一种手段、一种技巧，可以巧妙的跨过XHR跨域请求的限制——与JSON不同，不是一种字符串格式。<br>思路：</p>
+<ol>
+<li>不使用XHR对象——XHR的跨域请求会被浏览器禁止！</li>
+<li><p>在DOM树动态添加script元素——SCRIPT的跨域请求浏览器允许</p>
+<script src="跨域地址/xxx.php?fn=doResponse">
 
-var obj2 = {value:&quot;222&quot;};
-
-function changeStuff(obj){
-    obj.value=&quot;333&quot;
-    obj = obj2;
-    console.log(obj.value);
-}
-changeStuff(obj1);//&quot;222&quot; 参数obj指向了新的对象obj2
-console.log(obj1.value);//&quot;333&quot; obj1任然指向原来的对象，只是value改变了
-</code></pre><p>//<strong><strong><em>**</em></strong></strong></p>
-<pre><code>var arr = [1,2,3,4,5];
-function fun(obj){
-    obj[0] = 6;
-    obj = &quot;hi&quot;;
-    console.log(obj);  
-}
-fun(arr);//&quot;hi&quot;  原来obj指向arr对象的地址变量被赋值为变量&quot;hi&quot;
-console.log(arr);//Array [ 6, 2, 3, 4, 5 ]  arr任然指向原来的对象，只是对象的值被另一个引用改变了
-</code></pre><p>//<strong><strong><em>**</em></strong></strong></p>
-<pre><code>var arr = [1,2,3,4,5];
-function fun(){
-    arr[0] = 6;
-    arr = &quot;hi&quot;;
-    console.log(arr);  
-}
-fun();//hi  函数内调用全局arr，arr存有对象的地址已经被赋值为&quot;hi&quot;
-console.log(arr);//&quot;hi&quot; 函数内改变的是全局变量,内存已经没有存放对象地址的变量了，所以对象会被回收。
-</code></pre><p>//<strong><strong><em>**</em></strong></strong></p>
-<pre><code>var arr = [1,2,3,4,5];
-function fun(obj){
-    arr[0] = 6;
-    arr = &quot;hi&quot;;
-    console.log(obj);  
-}
-fun(arr);//Array [ 6, 2, 3, 4, 5 ]   对象的值已经被被另一个引用改变了
-console.log(arr);//&quot;hi&quot; arr存放指向对象地址的变量被赋值为变量&quot;hi&quot;
-</code></pre><p>当改变对象内部的属性的时候，这个改变会体现在外部，因为他们共同的对象被改变了。<br>而如果在函数内部给这个参数赋值另一个对象时，这个参数就会更改它的值为新对象的内存地址指向新对象，但是原来的变量任然指向原来的对象，此时是相互独立的。</p>
-<p>花了一上午时间学习markdown语法以及写这篇博文，第一次写这种笔记，写的不太好，不过也算跨出第一步了，加油！     </p>
-
+</li>
+</ol>
+<p>3.PHP页面返回的JSON字符串稍加改造：</p>
+<pre><code>$json = &apos;{&quot;ename&quot;:&quot;Tom&quot;, &quot;age&quot;:20}&apos;;
+//echo $json;
+echo  &apos;doResponse(&apos;. $json .&apos;)&apos;;   //字符串
+</code></pre><p>4.在静态HTML页面中声明function doResponse(data){ …}即可<br>客户端最终执行的语句如下：</p>
+<pre><code>doResponse({&quot;ename&quot;:&quot;Tom&quot;, &quot;age&quot;:20})
+</code></pre><p>其中的函数本地在HTML中声明，其中的数据是PHP返回的。</p>
+<p><em>由于服务器不知道客户端的回调是什么，不可能hard code成jsonpcallback，所以就带一个QueryString让客户端告诉服务端，回调方法是什么，当然，QueryString的key要遵从服务端的约定，上面的是”callback“。返回的就是对一个方法的回调，参数就是需要请求的数据</em></p>
+<p><strong>AJAX和JSONP的关系？</strong><br>严格说，二者没有任何关系！<br>AJAX的核心是XHR对象，不能发起跨域请求；<br>JSONP的核心是SCRIPT元素，可以发起跨域请求；<br>二者的相似点：都能实现异步请求，异步获取服务器端数据。</p>
+<p><strong>2.jQuery对JSONP的支持</strong><br>  <em>jQuery对AJAX的封装函数：</em></p>
+<pre><code>1. $(...).load( )        
+</code></pre><ol>
+<li>$.get( )      <ol>
+<li>$.post( )    </li>
+</ol>
+</li>
+<li>$.getScript( )<ol>
+<li>$.getJSON( )    使用XHR对象发起异步请求</li>
+</ol>
+</li>
+<li><p>$.ajax( )       使用XHR对象发起异步请求</p>
+<p><em>jQuery对JSONP的封装函数：</em> </p>
+</li>
+<li><p>$.getJSON( )    使用动态SCRIPT元素发起异步请求</p>
+<pre><code>$.getJSON(&apos;跨域地址/xx.php?callback=?&apos;, function(data){  })
+</code></pre></li>
+<li><p>$.ajax( )       使用动态SCRIPT元素发起异步请求</p>
+<pre><code>$.ajax({
+url: &apos;跨域地址/xx.php&apos;,
+dataType: &apos;jsonp&apos;,
+success: function(data){  }
+});
+</code></pre></li>
+</ol>
+<p><strong>缺点：</strong><br>1、这种方式无法发送post请求，无法解决数据量大的情况<br>2、另外要确定jsonp的请求是否失败并不容易，大多数框架的实现都是结合超时时间来判定。<br>3、安全隐患（容易受到csrf攻击，csrf的解决必须是post请求配合token使用）</p>
+<p>##解决方法二：CORS（跨域资源共享，Cross-Origin Resource Sharing）<br>    CORS的原理：<br>     W3C制定的跨站资源分享标准。post前会产生一次options嗅探来确认有否跨域请求的权限；客户端post时会带上Origin头指示来源网站，服务端响应时需带上Access-Control-Allow-Origin头与Origin头的值匹配，以示许可。ie8提供了封装好的XDomainRequest对象，部分实现了该标准；而其它浏览器则提供了XMLHttpRequest（Level 2）对象。<br><em>CORS定义一种跨域访问的机制，可以让AJAX实现跨域访问。CORS 允许一个域上的网络应用向另一个域提交跨域 AJAX 请求。实现此功能非常简单，只需由服务器发送一个响应标头即可。</em></p>
+<p>“*”号表示允许任何域向我们的服务端提交请求</p>
+<p>也可以指定域名<br>这种方式弥补了JSONP在数据量大，get方式搞不定的缺陷</p>
+<p>##解决方法三   Proxy代理<br><em>这种方式首先将请求发送给后台服务器，通过服务器来发送请求，然后将请求的结果传递给前端。</em><br>我们不能在浏览器端直接使用AJAX来跨域访问资源，但是在服务器端是没有这种跨域安全限制的。<br>北京服务器(域名:www.beijing.com)<br>上海服务器(域名：www.shanghai.com)<br>比如在北京的web服务器的后台(www.beijing.com/proxy.php)来调用上海服务器(www.shanghai.com/services.php)的服务，然后再把访问结果返回给前端，这样前端调用北京同域名的服务就和调用上海的服务效果相同了。</p>
+<p>具体代码如下：<br>首先我请求的是同一域名下服务器的资源</p>
+<p>服务器之间没有跨域限制所以可以向其他域名服务器请求资源  </p>
+<p>被请求的资源 5.php</p>
+<p>跨域请求成功</p>
+<p>以上就是跨域请求资源的几种解决方法，有一种跨域比较特殊就是在https协议下发送https请求，除了使用proxy代理外其他方法都无解。</p>
+</script></li></ol>
       
     </div>
 
@@ -338,17 +380,13 @@ console.log(arr);//&quot;hi&quot; arr存放指向对象地址的变量被赋值�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/12/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/04/10/JavaScript中的参数传递/" rel="next" title="JavaScript中的参数传递">
+                <i class="fa fa-chevron-left"></i> JavaScript中的参数传递
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/21/My-New-Post/" rel="prev" title="跨域请求的几种方式">
-                跨域请求的几种方式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -374,8 +412,8 @@ console.log(arr);//&quot;hi&quot; arr存放指向对象地址的变量被赋值�
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/10/JavaScript中的参数传递/"
-           data-title="JavaScript中的参数传递" data-url="http://yoursite.com/2016/04/10/JavaScript中的参数传递/">
+      <div class="ds-thread" data-thread-key="2016/05/21/My-New-Post/"
+           data-title="跨域请求的几种方式" data-url="http://yoursite.com/2016/05/21/My-New-Post/">
       </div>
     
   </div>
@@ -481,7 +519,7 @@ console.log(arr);//&quot;hi&quot; arr存放指向对象地址的变量被赋值�
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript中的数据结构"><span class="nav-number">1.</span> <span class="nav-text">JavaScript中的数据结构</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
